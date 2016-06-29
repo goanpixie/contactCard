@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('form').submit(function() {
+            var f_name = $('#first_name').val()
+            var l_name = $('#last_name').val()
+            var description = $('#description').val()
+
+
+            $('.contactCard').append('<tr>' + '<td>' + f_name + '</td>' +
+                '<td>' + l_name + '</td>' +
+                '<td>' + description + '</td>' +
+                '</tr>'
+            );
+            return false;
+        });
+    });
+    </script>
+</head>
+
+<body>
+    <table class="contactCard">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+    </table>
+    <br>
+    <br>
+    <form>
+        First Name:
+        <input type="text" name="First Name" id="first_name" placeholder="First Name"> Last Name:
+        <input type="text" name="Last Name" id="last_name" placeholder="Last Name"> Description:
+        <input type="text" name="text" id="description" placeholder="Description">
+        <input type="submit" value="Add User">
+    </form>
+</body>
+
+</html>
